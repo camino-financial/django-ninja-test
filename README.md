@@ -60,7 +60,7 @@ docker-compose exec -it api pytest
 For more detailed test information with coverage reports:
 
 ```bash
-docker exec -it api pytest -s -x --cov --cov-report=term
+docker-compose exec -it api pytest -s -x --cov --cov-report=term
 ```
 
 This will display:
@@ -94,6 +94,32 @@ To develop locally with Docker:
 1. Start the Docker container: `docker-compose up -d`
 2. Make changes to the code (the changes will be reflected automatically due to volume mounting)
 3. Run tests to verify: `docker compose exec -it api pytest`
+
+## Pre-commit Hooks
+
+This project uses pre-commit hooks to ensure code quality and consistency before committing changes.
+
+### Installation
+
+1. Install pre-commit locally:
+```bash
+pip install pre-commit
+```
+
+2. Install the git hooks:
+```bash
+pre-commit install
+```
+
+### Usage
+
+After installation, pre-commit hooks will run automatically on every commit. To run them manually on all files:
+
+```bash
+pre-commit run --all-files
+```
+
+Always run pre-commit hooks before pushing your changes to ensure your code meets the project's quality standards.
 
 ## License
 
