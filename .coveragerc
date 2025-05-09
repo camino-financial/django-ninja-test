@@ -1,0 +1,26 @@
+# .coveragerc
+[run]
+omit =
+    tests/*
+    */tests/*
+    */migrations/*
+    .venv/*
+    *tests*.py
+    manage.py
+    settings.py
+    base_app/wsgi.py
+    base_app/asgi.py
+
+[report]
+# Exclude test files and unnecessary lines from the report
+exclude_lines =
+    if __name__ == .__main__.:
+    pragma: no cover
+
+[html]
+# Specify the output directory for the HTML report
+directory = htmlcov
+
+# Output the report to XML format (for pytest --cov-report=xml)
+[xml]
+output = coverage.xml

@@ -1,0 +1,9 @@
+dj-database-url==2.3.0
+Django==5.2.1
+django-ninja==1.4.1
+# test dependencies
+coverage==7.8.0
+pytest==8.3.5
+pytest-cov==6.1.1
+pytest-django==4.11.1
+python-dotenv==1.1.0
