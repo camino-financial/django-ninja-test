@@ -1,6 +1,6 @@
 from ninja import NinjaAPI, Swagger
-from app.api import router
 
+from app.api import router
 
 api = NinjaAPI(
     title="Django Ninja API",
